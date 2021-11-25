@@ -6,8 +6,12 @@
             let picNumber = 0
             let myVar = null
             let timer = 0
+            
             let diceImage = $("<img>")
             let background = $("<div></div>");
+            let closeButton = $("<img>");
+            let imageCaption = null
+        
 
             const images = [
                 "pictures/1.jpg",
@@ -32,6 +36,8 @@
                 ]
 
             $(this).on("click", function() {
+
+                show()
                 timer = 0
 
                 //Trying to preload Images
@@ -41,8 +47,15 @@
                 
                 addBackGround()
                 addDicePic()
+                exitButton()
                 myVar= setInterval(showPictures, 50)
             })
+
+            function show(){
+                background.show()
+                diceImage.show()
+                closeButton.show()
+            }
 
             function addBackGround(){
                 background.css({
@@ -74,8 +87,9 @@
 
                 timer += 1
                 picNumber= Math.floor(Math.random() * 20) + 1 ;
+                console.log(picNumber)
                 $(diceImage).attr("src", `pictures/${picNumber}.jpg`);
-               //$(diceImage).attr("src", images[picNumber-1]);
+                //$(diceImage).attr("src", images[picNumber-1]);
 
                 if(timer == 50){
                     clearInterval(myVar)
@@ -84,7 +98,7 @@
             }
 
             function displayNumber(picNumber){
-                let imageCaption = $(`<h2>You rolled a ${picNumber}!!</h2>`);
+                imageCaption = $(`<h2>You rolled a ${picNumber}!!</h2>`);
                 imageCaption.css({    
                     "position" : "absolute",
                     "top" : "40%",
@@ -92,10 +106,34 @@
                     "width": "25%",
                     "text-align": "center",
                     "font-size" : "large",
-                    "color" : "red"
+                    "color" : "black"
                 })
                 $("body").append(imageCaption);
             }
+
+            function exitButton(){
+                let closeCss = {
+                    "color": "white",
+                    "cursor": "pointer",
+                    "width": "100px",
+                    "height": "50px",
+                    "position": "absolute",
+                    "top": "20px",
+                    "right": "20px",
+                    "border": "0px",
+                    "z-index": "1" 
+                }
+                closeButton.attr("src", "exitbutton2.png");
+                closeButton.css(closeCss);
+                $("body").append(closeButton);
+            }
+
+            closeButton.on("click", function(){
+                background.hide()
+                diceImage.hide()
+                closeButton.hide()
+                imageCaption.hide()
+            })
         })
     }
 }(jQuery))
