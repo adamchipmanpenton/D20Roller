@@ -87,7 +87,7 @@
             if(picNumber == 1){
                 showDiceNumber = $(`<p>&#129324</p>`);
             }else if(picNumber == 20){
-                showDiceNumber = $(`<p>🎉</p>`);
+                showDiceNumber = $(`<p>&#129321</p>`);
             }else{
                 showDiceNumber = $(`<h2>You rolled a ${picNumber}!!</h2>`);
             }
