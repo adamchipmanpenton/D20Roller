@@ -9,5 +9,5 @@ $("#rollD20").rollD20({
         fontcolor : "black",
         fontFamily: "Times New Roman"
     },
-   diceColor : "red"
+  
 });
