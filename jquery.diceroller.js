@@ -7,7 +7,7 @@
                 border: "2px solid black",
                 borderRadius : "20px"
             },
-            showDiceNumber: {
+            diceCaption: {
                 fontsize : "100%",
                 fontcolor : "black",
                 fontFamily: "Times New Roman"
@@ -108,23 +108,23 @@
                 exitButton()
                 closeButton.show()
                 if(picNumber == 1){
-                    showDiceNumber = $(`<p>&#129324</p>`);
+                    diceCaption = $(`<p>&#129324</p>`);
                 }else if(picNumber == 20){
-                    showDiceNumber = $(`<p>&#129321</p>`);
+                    diceCaption = $(`<p>&#129321</p>`);
                 }else{
-                    showDiceNumber = $(`<h2>You rolled a ${picNumber}!!</h2>`);
+                    diceCaption = $(`<h2>You rolled a ${picNumber}!!</h2>`);
                 }
-                showDiceNumber.css({    
+                diceCaption.css({    
                     "position" : "absolute",
                     "top" : "40%",
                     "left" : "37.5%",
                     "width": "25%",
                     "text-align": "center",
-                    "font-size" : settings.showDiceNumber.fontsize,
-                    "color" : settings.showDiceNumber.fontcolor,
-                    "font-family": settings.showDiceNumber.fontFamily
+                    "font-size" : settings.diceCaption.fontsize,
+                    "color" : settings.diceCaption.fontcolor,
+                    "font-family": settings.diceCaption.fontFamily
                 })
-                $("body").append(showDiceNumber);
+                $("body").append(diceCaption);
             }
 
             function exitButton(){
