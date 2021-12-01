@@ -1,5 +1,13 @@
 $("#rollD20").rollD20({
-
-    diceColor : "red"
-
+        background : "grey",
+        diceImage :{
+            border: "2px solid black",
+            borderRadius : "20px"
+        },
+        showDiceNumber: {
+            fontsize : "100%",
+            fontcolor : "black",
+            fontFamily: "Times New Roman"
+        },
+       diceColor : "red"
 });

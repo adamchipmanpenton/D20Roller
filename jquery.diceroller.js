@@ -5,20 +5,17 @@
             background : "grey",
             diceImage :{
                 border: "2px solid black",
-                borderradius : "20px"
+                borderRadius : "20px"
             },
             showDiceNumber: {
                 fontsize : "100%",
                 fontcolor : "black",
-                fontfamily: "Times New Roman"
+                fontFamily: "Times New Roman"
             },
            diceColor : "red"
-
-
         }, options)
 
         return this.each(function() {
-          
             let picNumber = 0
             let myVar = null
             let timer = 0
@@ -47,19 +44,15 @@
                 `pictures/${diceColor}/17.jpg`,
                 `pictures/${diceColor}/18.jpg`,
                 `pictures/${diceColor}/19.jpg`,
-                `pictures/${diceColor}/20.jpg`,
-            
+                `pictures/${diceColor}/20.jpg`
             ]
 
-
-            
             $(this).on("click", function() {
                 timer = 0
                 preload(images)
                 show()
                 addBackGround()
                 addDicePic()
-                exitButton()
                 myVar= setInterval(showPictures, 50)
             })
 
@@ -72,7 +65,6 @@
             function show(){
                 background.show()
                 diceImage.show()
-                closeButton.show()
             }
 
             function addBackGround(){
@@ -97,7 +89,7 @@
                     "left" : "37.5%",
                     "width": "25%",
                     "border": settings.diceImage.border,
-                    "border-radius": settings.diceImage.borderradius
+                    "border-radius": settings.diceImage.borderRadius
                 })
                 $("body").append(diceImage);
             }
@@ -113,15 +105,15 @@
             }
 
             function displayNumber(picNumber){
-
-            if(picNumber == 1){
-                showDiceNumber = $(`<p>&#129324</p>`);
-            }else if(picNumber == 20){
-                showDiceNumber = $(`<p>&#129321</p>`);
-            }else{
-                showDiceNumber = $(`<h2>You rolled a ${picNumber}!!</h2>`);
-            }
-                
+                exitButton()
+                closeButton.show()
+                if(picNumber == 1){
+                    showDiceNumber = $(`<p>&#129324</p>`);
+                }else if(picNumber == 20){
+                    showDiceNumber = $(`<p>&#129321</p>`);
+                }else{
+                    showDiceNumber = $(`<h2>You rolled a ${picNumber}!!</h2>`);
+                }
                 showDiceNumber.css({    
                     "position" : "absolute",
                     "top" : "40%",
@@ -130,7 +122,7 @@
                     "text-align": "center",
                     "font-size" : settings.showDiceNumber.fontsize,
                     "color" : settings.showDiceNumber.fontcolor,
-                    "font-family": settings.showDiceNumber.fontfamily
+                    "font-family": settings.showDiceNumber.fontFamily
                 })
                 $("body").append(showDiceNumber);
             }
@@ -146,11 +138,10 @@
                     "border": "0px",
                     "z-index": "1" 
                 }
-                closeButton.attr("src", "exitbutton2.png");
+                closeButton.attr("src", "pictures/exitbutton.png");
                 closeButton.css(closeCss);
                 $("body").append(closeButton);
             }
-
             closeButton.on("click", function(){
                 background.hide()
                 diceImage.hide()
