@@ -16,7 +16,7 @@ The plugin was made using jQuery 3.4.1. You will need to refer to jQuey and the 
 <script src="jquery.diceroller.js" type="text/javascript"></script>
 ```
 
-You will need to create a button on your webpage, it can be called anything, as long as if refereats to .rollD20({}); after it. 
+You will need to create a button on your webpage, it can be called anything, as long as it refers to .rollD20({}); after it. 
 
 ## Options
 
