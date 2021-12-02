@@ -18,8 +18,9 @@ The plugin was made using jQuery 3.4.1. You will need to refer to jQuey and the 
 
 You will need to create a button on your webpage, it can be called anything, as long as if refereats to .rollD20({}); after it. 
 
-Here is an example of options that you can change in the plugin. They are also the default values. The diceColor options are black, green, purple, red, yellow.
-The diceCaption is what is displayed after the roll, saying what the value is. You can change the size, color, and type of the font. 
+## Options
+
+Here is an example of options that you can change in the plugin. They are also the default values.
 
  
 ```
@@ -36,4 +37,23 @@ $("#rollD20").rollD20({
     },
   
 });
-```
+``` 
+### background
+
+Is the background color of the pop up.
+
+### diceColor options 
+
+Black
+Green
+Purple 
+Red
+Yellow
+
+### diceCaption
+
+This is what is displayed after the roll, saying what the value is. You can change the size, color, and type of the font. 
+
+### diceImage
+
+The picture of the dice as it is being rolled and after. You can change the size and color of the border to match your webpage. As well as the border radius. 
