@@ -44,11 +44,11 @@ Is the background color of the pop up.
 
 ### diceColor options 
 
-Black
-Green
-Purple 
-Red
-Yellow
+- Black
+- Green
+- Purple 
+- Red
+- Yellow
 
 ### diceCaption
 
