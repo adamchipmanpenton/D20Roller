@@ -146,7 +146,7 @@
                 background.hide()
                 diceImage.hide()
                 closeButton.hide()
-                showDiceNumber.hide()
+                diceCaption.hide()
             })
         })
     }
